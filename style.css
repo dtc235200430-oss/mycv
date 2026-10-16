@@ -1,0 +1,247 @@
+/* Reset và thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Container chính của CV */
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header: Thông tin cá nhân */
+.cv-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.cv-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.job-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.contact-info span {
+    font-weight: bold;
+}
+
+/* Các section trong CV */
+.cv-section {
+    padding: 25px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.cv-section:last-of-type {
+    border-bottom: none;
+}
+
+.cv-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+}
+
+/* Kỹ năng */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: #f1f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d4e6ff;
+}
+
+.skill-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.skill-item ul {
+    list-style: none;
+}
+
+.skill-item li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-item li::before {
+    content: "✔";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Kinh nghiệm làm việc */
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.company {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.experience-item li {
+    padding: 5px 0;
+    position: relative;
+}
+
+.experience-item li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: -15px;
+}
+
+/* Học vấn */
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.school {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Dự án */
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.project-tech {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Chứng chỉ */
+.cv-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.cv-section li {
+    padding: 5px 0;
+    position: relative;
+}
+
+.cv-section li::before {
+    content: "🏆";
+    position: absolute;
+    left: -20px;
+}
+
+/* Footer */
+.cv-footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .cv-container {
+        margin: 10px;
+    }
+
+    .cv-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv-section {
+        padding: 20px;
+    }
+}
+
+/* In ấn */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .cv-header {
+        background: #2c3e50;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
